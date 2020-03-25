@@ -1,24 +1,12 @@
-
-# coding: utf-8
-
-# In[4]:
-
-
 import re
 ## ----open file
 f3 = open ("C:\\Winston\\fileconvert\\FECLP30.csv",'r')
-
-
 ## ----- read array
-
 Arr_f3 = f3.readlines() ## 定義f1 逐行讀資料動作
-
-## for n in range (len(Arr_f3)): # 逐行讀取後逐行顯示
-   ## print (n, Arr_f3[n])
 
 M1 = [0 for m in range(55)]
 
-for l in range (17,73):
+for l in range (17,len(Arr_f3)):
 ## M1[l]= abs(float(re.split(",", Arr_f3[l]))*10^-5))
   Arr_temp = re.split(",", Arr_f3[l])
   k= l-17
@@ -28,7 +16,7 @@ print(M1)
 
 M2 = [0 for o in range(55)]
 
-for u in range (17,78):
+for u in range (17,len(Arr_f3)):
 ## M1[l]= abs(float(re.split(",", Arr_f3[l]))*10^-5))
   Arr_temp2 = re.split(",", Arr_f3[u])
   p= u-17
